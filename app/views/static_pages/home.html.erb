@@ -1,6 +1,12 @@
-<% provide(:title, 'Home') %>
-<h1>Aquaheli</h1>
-<p>
-  Bringing the skies and oceans to Indy Film Makers
-  <a href="http://aquaheli.com/">Aquaheli</a>
-</p>
+<div class="center hero-unit">
+  <h1>Welcome to Aquaheli</h1>
+
+  <h2>
+	Bringing the skies and oceans to Indy Film Makers
+	<a href="http://aquaheli.com/">Aquaheli</a>
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("AquaHeliLogo.png", alt: "Aquaheli"), 'http://aquaheli.com/' %>
