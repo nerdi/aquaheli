@@ -10,11 +10,8 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
-<<<<<<< HEAD
   gem "better_errors"
-=======
   gem 'factory_girl_rails', '4.2.1'
->>>>>>> sign-up
 end
 
 group :test do
