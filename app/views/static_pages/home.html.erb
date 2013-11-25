@@ -1,12 +1,27 @@
-<div class="center hero-unit">
-  <h1>Welcome to Aquaheli</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to Aquaheli</h1>
+	<h2>
+		Bringing the skies and oceans to Indy Film Makers
+		<a href="http://aquaheli.com/">Aquaheli</a>
+	</h2>
+  	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  </div>
 
-  <h2>
-	Bringing the skies and oceans to Indy Film Makers
-	<a href="http://aquaheli.com/">Aquaheli</a>
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
-
-<%= link_to image_tag("AquaHeliLogo.png", alt: "Aquaheli"), 'http://aquaheli.com/' %>
+  <%= link_to image_tag("AquaHeliLogo.png", alt: "Aquaheli"), 'http://aquaheli.com/' %>
+<% end %>
